@@ -98,6 +98,7 @@ app.post("/proxy/session", async (req, res) => {
       headers: {
         Authorization: `Bearer ${req.headers.authorization}`, // Pass the token from the client
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify(req.body), // Pass client request body
     });
